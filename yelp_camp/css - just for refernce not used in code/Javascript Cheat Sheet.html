@@ -1,0 +1,62 @@
+@ To clear the console
+->clear()
+
+@ To write in console
+->console.log("anything"+20)
+
+@ Comparison Operators
+var x=5;
+
+x=="5"; //true  It converts them in same type so that it can compare both.
+
+x==="5" //false  It does not perform type conversion so both needs to be of same type and           same value.
+
+@ Each value has a truthy or falsy value
+Falsy values:
+""
+null
+undefined
+false
+0
+NaN
+
+Everything else is truthy
+
+@ The below code checks whether in a sentence if any word is yes
+var ansert=prompt("are we there yet?");
+
+while(answer.indexOf("yes")===-1){
+  var ans=prompt("are we there yet?");
+}
+
+alert("yes we made it")
+
+@ .slice(2) function
+"string".slice(2); //  gives ring  it shows string from index 2 .
+
+@ function expression vs function declaration
+function fuc(){};  // this is function declaration
+var fuc = function(){};      //This is function expression
+
+@ return
+function fuc(){
+  return 40;
+  return 80;
+}
+fuc();    //this gives 40 only as the function is over after return statement is executed
+
+@ setInterval(display,1000){}  display() is called every 1000 ms or every second
+  clearInterval(171);          To stop setInterval. 171 is number that is produced on executing setInterval()
+
+@ Arrays
+  var arr = ["one","two",56];
+  var arr = new Array();
+
+  arr.push("one");                 //adds one to end of array
+  var str = arr.pop();             //pops last data from array
+  arr.shift();                     //pops first data of array
+  var str = arr.unshift("two");    //adds two at starting of array
+
+  var str = arr.slice(1,3);        // str = arr[1]+arr[2]
+
+  var str = arr.slice();           // str = arr[];  whole array is copied

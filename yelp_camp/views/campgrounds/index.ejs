@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<!-- ../ go back one folder -->
+
+<div class="container">
+<header class="jumbotron">
+  <h1>Welcome to Yelp-camp</h1>
+  <p>View our handpicked campgrounds from all over the world</p>
+  <a class="btn btn-primary btn-large" href="/campgrounds/new">Add new campground</a>
+</header>
+
+<div class="row text-center" style="display:flex; flex-wrap:wrap;" >
+  <% campgrounds.forEach(function(element){ %>
+    <div class="col-md-3 ">
+      <div class="thumbnail">
+        <img src="<%= element.url%>" class="img-rounded"alt="not working" height="300" width="500">
+        <div class="caption">
+          <h4> <%= element.name%></h4>
+        </div>
+        <p>
+          <a href="/campgrounds/<%= element._id %>" class="btn btn-primary">More info</a>
+        </p>  <!-- Each saved object has an id in mongo which is element._id here -->
+      </div>
+
+    </div>
+  <% }) %>
+</div>
+
+
+
+</div>
+<% include ../partials/footer %>
+<!-- ../ go back one folder -->
