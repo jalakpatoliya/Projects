@@ -1,0 +1,12 @@
+<% include partials/header %>
+
+<h1> The list of Books and its author </h1>
+
+<% posts.forEach(function(post){ %>
+<li>
+  <%= post.title %> - <storng> <%= post.author   %> </storng>
+</li>
+
+<% })  %>
+
+<% include partials/footer %>

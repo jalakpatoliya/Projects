@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+<h1>HElooe You fallin  with :
+  <%= thingvar.toUpperCase() %>
+</h1>
+
+<% if(thingvar.toLowerCase()==="rusty"){ %>
+  <p>Good choice RUSTY Rocks!!</p>
+<% } else { %>
+<p>You should have chosen RUSTY.</p>
+<% } %>
+
+//EJS stands for embed java script
+//it embeds javascript in html
+// <%= %> this prints return value of the line in it
+//<%  %>  this is used for control statements,
+conditional statements,loops,etc.
+
+<% include partials/footer %>
