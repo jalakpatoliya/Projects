@@ -52,7 +52,7 @@ function isLoggedIn(req,res,next) {
     return next();
   }
   console.log("user is not logged in");
-    res.redirect("/Adminlogin");
+    res.redirect("/login");
 }
 //=========================================================
 //=============Logout route================================

@@ -14,7 +14,7 @@ var passport              = require("passport"),
 
     // Authorization ROUTES===============================
     // Show sign up form
-    router.get("/register",isAdmin,function(req,res){
+    router.get("/register",isLoggedIn,isAdmin,function(req,res){
       res.render("register.ejs");
     })
 
@@ -45,7 +45,9 @@ var passport              = require("passport"),
       failureRedirect:"/login"
     }),function(req,res){console.log(req.body.username);});
 
-    //================== isAdmin function ========================
+    //=========================================================
+    //================== isAdmin function =====================
+    //=========================================================
     function isAdmin(req,res,next) {
       console.log(req.user.username);
       if (req.isAuthenticated()){
@@ -63,6 +65,20 @@ var passport              = require("passport"),
         console.log("isAdmin: is authenticated is false");
           res.redirect("/login");
       }
-
     }
+
+    //=========================================================
+    //=============== isLoggedIn function======================
+    //=========================================================
+    //authenticating if user is loggedin or not
+    function isLoggedIn(req,res,next) {
+      if (req.isAuthenticated()){
+        console.log("user is logged in");
+        return next();
+      }
+      console.log("user is not logged in");
+        res.redirect("/login");
+    }
+
+
 module.exports = router;
