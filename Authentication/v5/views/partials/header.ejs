@@ -50,6 +50,7 @@
         <hr>  <a href="#">Signed in as <%= currentUser.username%></a>
         <hr>  <a class=" item" href="/logout">Logout</a>
         <% }else if (currentUser.role=="admin") { %>
+          <div class="ui top right attached label">Admin</div>
         <hr>  <a href="#">Signed in as <%= currentUser.username%></a><br>
           <a class=" item" href="/register">Sign Up a user</a>
           <a class=" item" href="/login">Login as user</a>
